@@ -1,0 +1,63 @@
+/* Police d'écriture */
+@import url('https://fonts.googleapis.com/css2?family=Danfo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Danfo", serif;
+    font-style: normal;
+    font-variation-settings: "ELSH" 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.games_infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contenaire {
+    height: 400px;
+    width: 500px;
+    border: 1px solid #999;
+    cursor: crosshair;
+    position: relative; /* Important for absolute positioning of children */
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto; /* Center the container */
+}
+
+#target { /* cible */
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    transition: 0.25s;
+    animation: animateTarget 10s infinite;
+}
+
+button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #3C7103;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+@keyframes animateTarget {
+    to {
+        transform: translateY(-200px) rotate(90deg);
+    }
+}
